@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /**
  * @license
  * Visual Blocks Editor
@@ -247,6 +248,32 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
       '</value>' +
     '</block>' +
     '<block type="sound_volume" id="sound_volume"></block>' +
+    '<block type="sound_playSoundFromMQTT">' +
+    '<value name="SOUND">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">Sound</field>' +
+      '</shadow>' +
+    '</value>' +
+    '<value name="SATELLITE">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">satellite</field>' +
+      '</shadow>' +
+    '</value>' +
+  '</block>' +
+  '<block type="sound_playSound">' +
+      '<value name="SOUND">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">Sound Name</field>' +
+        '</shadow>' +
+    '</value>' +
+  '</block>' +
+  '<block type="sound_setVolume" id="sound_setVolume">' +
+    '<value name="SATELLITE">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">satellite</field>' +
+      '</shadow>' +
+    '</value>' +
+  '</block>' +
   '</category>' +
   '<category name="%{BKY_CATEGORY_EVENTS}" id="events" colour="#FFD500" secondaryColour="#CC9900">' +
     '<block type="event_whenflagclicked" id="event_whenflagclicked"></block>' +
@@ -274,6 +301,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
         '<shadow type="event_broadcast_menu"></shadow>' +
       '</value>' +
     '</block>' +
+    '<block type="event_resetGame"></block>' +
   '</category>' +
   '<category name="%{BKY_CATEGORY_CONTROL}" id="control" colour="#FFAB19" secondaryColour="#CF8B17">' +
     '<block type="control_wait" id="control_wait">' +
@@ -518,9 +546,187 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
       '</value>' +
     '</block>' +
   '</category>' +
-  '<category name="%{BKY_CATEGORY_VARIABLES}" id="data" colour="#FF8C1A" secondaryColour="#DB6E00" custom="VARIABLE">' +
+  '<category name="Game Control" id="countdownGame" colour="#CF173B" secondaryColour="#900C3F" ' +
+  'showStatusButton="false">' +
+    '<block type="countdown_gameMode" id="countdown_gameMode"></block>' +
+    '<block type="countdown_gameModeCheck" id="countdown_gameModeCheck"></block>' +
+  '</category>' +
+  '<category name="Lights" id="lights" colour="#3399ff" secondaryColour="#3399ff" ' +
+  'showStatusButton="false">' +
+    '<block type="lights_startsequence">' +
+      '<value name="VALUE">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">File Name</field>' +
+        '</shadow>' +
+      '</value>' +
+    '</block>' +
+    '<block type="lights_sendMessage">' +
+      '<value name="VALUE">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">sequence</field>' +
+        '</shadow>' +
+      '</value>' +
+      '<value name="SATELLITE">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">Satellite #</field>' +
+        '</shadow>' +
+      '</value>' +
+    '</block>' +
+  '</category>' +
+  '<category name="Messages" id="messages" colour="#008080" secondaryColour="#086363" ' +
+    'showStatusButton="false">' +
+      '<block type="message_sendGameMQTT">' +
+      '<value name="VALUE">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">value</field>' +
+        '</shadow>' +
+        '</value>' +
+        '<value name="TOPIC">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">topic</field>' +
+        '</shadow>' +
+        '</value>' +
+      '</block>' +
+      '<block type="message_receiveGameMQTT">' +
+      '<value name="TOPIC">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">topic</field>' +
+        '</shadow>' +
+        '</value>' +
+      '</block>' +
+      '<block type="message_waitUntilBroadcast">' +
+        '<value name="TOPIC">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">topic</field>' +
+        '</shadow>' +
+        '</value>' +
+      '</block>' +
+    '</category>' +
+    '<category name="Movement" id="movement" colour="#6666ff" secondaryColour="#2323B2" ' +
+    'showStatusButton="false">' +
+    '<block type="movement_waitUntilSatSensing"></block>' +
+    '<block type="movement_whenAnyPresenceSensed">' +
+      '<value name="SATELLITE">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">satellite</field>' +
+        '</shadow>' +
+      '</value>' +
+      '</block>' +
+    '<block type="movement_arePresencesSensed">' +
+      '<value name="SATELLITE">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">satellite</field>' +
+        '</shadow>' +
+      '</value>' +
+    '</block>' +
+    '</category>' +
+  '<category name="%{BKY_CATEGORY_VARIABLES}" id="data" colour="#CF173B" secondaryColour="#DB6E00" custom="VARIABLE">' +
   '</category>' +
   '<category name="%{BKY_CATEGORY_MYBLOCKS}" id="more" colour="#FF6680" secondaryColour="#FF4D6A" custom="PROCEDURE">' +
+    '</category>' +
+  '<category name="Display Control" id="display" colour="#17C1CF" secondaryColour="#1D7B83" ' +
+  'showStatusButton="false">' +
+    '<block type="display_image" id="display_image"></block>' +
+    '<block type="display_animateImage" id="display_animateImage"></block>' +
+    '<block type="display_fillImage" id="display_fillImage">' +
+      '<value name="BEGIN">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">begin</field>' +
+        '</shadow>' +
+      '</value>' +
+      '<value name="END">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">end</field>' +
+      '</shadow>' +
+    '</value>' +
+    '<value name="RED">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">red</field>' +
+      '</shadow>' +
+    '</value>' +
+    '<value name="GREEN">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">green</field>' +
+      '</shadow>' +
+    '</value>' +
+    '<value name="BLUE">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">blue</field>' +
+      '</shadow>' +
+    '</value>' +
+    '</block>' +
+    '<block type="display_displayHistogram" id="display_displayHistogram">' +
+    '<value name="RED">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">red</field>' +
+      '</shadow>' +
+    '</value>' +
+    '<value name="GREEN">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">green</field>' +
+      '</shadow>' +
+    '</value>' +
+    '<value name="BLUE">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">blue</field>' +
+      '</shadow>' +
+    '</value>' +
+    '</block>' +
+  '</category>' +
+  '<category name="Touch" id="touch" colour="#ff6699" secondaryColour="#ff6699" ' +
+    'showStatusButton="false">' +
+    '<block type="touch_waitUntilSatTouched"></block>' +
+    '<block type="touch_whenAnySatTouched">' +
+      '<value name="SATELLITE">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">satellite</field>' +
+        '</shadow>' +
+      '</value>' +
+      '</block>' +
+      '<block type="touch_isTouched">' +
+        '<value name="SATELLITE">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">satellites</field>' +
+          '</shadow>' +
+        '</value>' +
+      '</block>' +
+    '</category>' +
+    '<category name="Device Control" id="virtualSat" colour="#118000" secondaryColour="#13520A" ' +
+    'showStatusButton="true">' +
+      '<block type="virtualsat_addNewVirtualSat">' +
+        '<value name="VALUE">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">Name</field>' +
+          '</shadow>' +
+        '</value>' +
+      '</block>' +
+      '<block type="virtualsat_stopEvent">' +
+        '<value name="SATELLITE">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">satellite</field>' +
+          '</shadow>' +
+        '</value>' +
+        '<value name="SATELLITE">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">satellite</field>' +
+          '</shadow>' +
+        '</value>' +
+      '</block>' +
+      '<block type="virtualsat_setRadarSensitivities" id="virtualsat_setRadarSensitivities">' +
+      '<value name="SATELLITE">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">satellite</field>' +
+        '</shadow>' +
+      '</value>' +
+    '</block>' +
+    '<block type="virtualsat_cycleSatellitePower"></block>' +
+    '<block type="virtualsat_rebootSatellite">' +
+    '<value name="SATELLITE">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">satellite</field>' +
+      '</shadow>' +
+    '</value>' +
+    '</block>' +
   '</category>' +
   '<category name="Extensions" id="extensions" colour="#FF6680" secondaryColour="#FF4D6A" ' +
     'iconURI="../media/extensions/wedo2-block-icon.svg" showStatusButton="true">' +
