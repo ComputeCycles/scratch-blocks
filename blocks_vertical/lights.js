@@ -26,6 +26,7 @@ goog.provide('Blockly.Blocks.lights');
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Colours');
 goog.require('Blockly.constants');
+goog.require('Blockly.ScratchBlocks.VerticalExtensions');
 
 Blockly.Blocks['lights_startsequence'] = {
   init: function() {
