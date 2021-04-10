@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /**
  * @license
  * Visual Blocks Editor
@@ -25,6 +26,41 @@ goog.provide('Blockly.Colours');
 Blockly.Colours = {
   // SVG colours: these must be specificed in #RRGGBB style
   // To add an opacity, this must be specified as a separate property (for SVG fill-opacity)
+  "virtualSat": {
+    "primary": "#118000",
+    "secondary": "#13520A",
+    "tertiary": "#13520A"
+  },
+  "touch": {
+    "primary": "#ff6699",
+    "secondary": "#AB1D4C",
+    "tertiary": "#ff6699"
+  },
+  "movement": {
+    "primary": "#6666ff",
+    "secondary": "#6666ff",
+    "tertiary": "#6666ff"
+  },
+  "messages": {
+    "primary": "#008080",
+    "secondary": "#086363",
+    "tertiary": "#086363"
+  },
+  "lights": {
+    "primary": "#3399ff",
+    "secondary": "#1556E1",
+    "tertiary": "#1556E1"
+  },
+  "display": {
+    "primary": "#17C1CF",
+    "secondary": "#1D7B83",
+    "tertiary": "#1D7B83"
+  },
+  "countdown": {
+    "primary": "#CF173B",
+    "secondary": "#900C3F",
+    "tertiary": "#900C3F"
+  },
   "motion": {
     "primary": "#4C97FF",
     "secondary": "#4280D7",
