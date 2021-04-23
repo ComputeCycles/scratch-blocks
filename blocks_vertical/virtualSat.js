@@ -99,10 +99,11 @@ Blockly.Blocks['virtualsat_setRadarSensitivities'] = {
           "type": "field_dropdown",
           "name": "SENSITIVITY",
           "options": [
-            ['Near', 'set short'],
-            ['Medium', 'set medium'],
-            ['Far', 'set long'],
-            ['Max', 'set max'],
+            ['Off', 'off'],
+            ['Near', 'near'],
+            ['Medium', 'medium'],
+            ['Far', 'long'],
+            ['Max', 'max'],
           ]
         },
         {
