@@ -600,7 +600,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
         '</shadow>' +
         '</value>' +
       '</block>' +
-      '<block type="message_resetgame"></block>' +
+      '<block type="message_resetThread"></block>' +
     '</category>' +
     '<category name="Movement" id="movement" colour="#6666ff" secondaryColour="#2323B2" ' +
     'showStatusButton="false">' +
