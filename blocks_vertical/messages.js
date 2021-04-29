@@ -64,17 +64,28 @@ Blockly.Blocks['message_receiveGameMQTT'] = {
     });
   }
 };
-  
+
 Blockly.Blocks['message_waitUntilBroadcast'] = {
   init: function() {
     this.jsonInit({
-      "message0": "Wait Until broadcast received on %1",
+      "message0": "Wait until broadcast received on %1",
       "args0": [
         {
           "type": "input_value",
           "name": "TOPIC"
         }
       ],
+      "category": Blockly.Categories.messages,
+      "extensions": ["colours_messages", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['message_resetgame'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "Reset thread",
+      "args0": [],
       "category": Blockly.Categories.messages,
       "extensions": ["colours_messages", "shape_statement"]
     });
