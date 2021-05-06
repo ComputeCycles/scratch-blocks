@@ -81,7 +81,7 @@ Blockly.Blocks['message_waitUntilBroadcast'] = {
   }
 };
 
-Blockly.Blocks['message_resetgame'] = {
+Blockly.Blocks['message_resetThread'] = {
   init: function() {
     this.jsonInit({
       "message0": "Reset thread",
