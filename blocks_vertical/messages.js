@@ -91,3 +91,46 @@ Blockly.Blocks['message_resetThread'] = {
     });
   }
 };
+
+Blockly.Blocks['listen_whenMQTTpubreceived'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "When MQTT pub received on %1",
+      "args0": [
+          {
+            "type": "input_value",
+            "name": "TOPIC"
+          }
+        ],
+      "category": Blockly.Categories.messages,
+      "extensions": ["colours_messages", "shape_hat"]
+    });
+  }
+};
+
+Blockly.Blocks['message_addSubscription'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "Add MQTT subscription to topic: %1",
+      "args0": [
+          {
+            "type": "input_value",
+            "name": "TOPIC"
+          }
+        ],
+      "category": Blockly.Categories.messages,
+      "extensions": ["colours_messages", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['message_deleteSubscriptions'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "Delete all user MQTT subscriptions",
+      "args0": [],
+      "category": Blockly.Categories.messages,
+      "extensions": ["colours_messages", "shape_statement"]
+    });
+  }
+};
