@@ -274,8 +274,8 @@ Blockly.Blocks['sound_playSoundFromMQTT'] = {
           "name": "SATELLITE"
         }
       ],
-      "category": Blockly.Categories.sound,
-      "extensions": ["colours_sounds", "shape_statement"]
+      "category": Blockly.Categories.lights,
+      "extensions": ["colours_lights", "shape_statement"]
     });
   }
 };
@@ -304,8 +304,8 @@ Blockly.Blocks['sound_setVolume'] = {
           "name": "SATELLITE"
         }
       ],
-      "category": Blockly.Categories.sound,
-      "extensions": ["colours_sounds", "shape_statement"]
+      "category": Blockly.Categories.lights,
+      "extensions": ["colours_lights", "shape_statement"]
     });
   }
 };
