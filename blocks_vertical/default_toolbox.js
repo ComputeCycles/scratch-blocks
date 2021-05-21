@@ -545,9 +545,21 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
       '</value>' +
     '</block>' +
   '</category>' +
+  '<block type="virtualsat_stopEvent">' +
+        '<value name="SATELLITE">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">satellite</field>' +
+          '</shadow>' +
+        '</value>' +
+        '<value name="SATELLITE">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">satellite</field>' +
+          '</shadow>' +
+        '</value>' +
+      '</block>' +
   '<category name="Messages" id="messages" colour="#008080" secondaryColour="#086363" ' +
     'showStatusButton="false">' +
-      '<block type="message_sendGameMQTT">' +
+      '<block type="message_sendValueToTopic">' +
       '<value name="VALUE">' +
           '<shadow type="text">' +
             '<field name="TEXT">value</field>' +
@@ -559,21 +571,6 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
         '</shadow>' +
         '</value>' +
       '</block>' +
-      '<block type="message_receiveGameMQTT">' +
-      '<value name="TOPIC">' +
-          '<shadow type="text">' +
-            '<field name="TEXT">topic</field>' +
-        '</shadow>' +
-        '</value>' +
-      '</block>' +
-      '<block type="message_waitUntilBroadcast">' +
-        '<value name="TOPIC">' +
-          '<shadow type="text">' +
-            '<field name="TEXT">topic</field>' +
-        '</shadow>' +
-        '</value>' +
-      '</block>' +
-      '<block type="message_resetThread"></block>' +
       '<block type="message_addSubscription">' +
         '<value name="TOPIC">' +
           '<shadow type="text">' +
@@ -582,13 +579,6 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
         '</value>' +
       '</block>' +
       '<block type="message_deleteSubscriptions">' +
-      '</block>' +
-      '<block type="listen_whenMQTTpubreceived">' +
-        '<value name="TOPIC">' +
-          '<shadow type="text">' +
-            '<field name="TEXT">topic</field>' +
-          '</shadow>' +
-        '</value>' +
       '</block>' +
     '</category>' +
     '<category name="Movement" id="movement" colour="#6666ff" secondaryColour="#2323B2" ' +
@@ -608,6 +598,13 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
         '</shadow>' +
       '</value>' +
     '</block>' +
+    '<block type="virtualsat_setRadarSensitivities" id="virtualsat_setRadarSensitivities">' +
+    '<value name="SATELLITE">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">satellite</field>' +
+      '</shadow>' +
+    '</value>' +
+  '</block>' +
     '</category>' +
   '<category name="%{BKY_CATEGORY_VARIABLES}" id="data" colour="#CF173B" secondaryColour="#DB6E00" custom="VARIABLE">' +
   '</category>' +
@@ -664,7 +661,6 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
   '</category>' +
   '<category name="Touch" id="touch" colour="#ff6699" secondaryColour="#ff6699" ' +
     'showStatusButton="false">' +
-    '<block type="touch_waitUntilSatTouched"></block>' +
     '<block type="touch_whenAnySatTouched">' +
       '<value name="SATELLITE">' +
         '<shadow type="text">' +
@@ -681,7 +677,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
       '</block>' +
     '</category>' +
     '<category name="Device Control" id="virtualSat" colour="#118000" secondaryColour="#13520A" ' +
-    'showStatusButton="true">' +
+    'showStatusButton="false">' +
       '<block type="virtualsat_addNewVirtualSat">' +
         '<value name="VALUE">' +
           '<shadow type="text">' +
@@ -689,25 +685,6 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
           '</shadow>' +
         '</value>' +
       '</block>' +
-      '<block type="virtualsat_stopEvent">' +
-        '<value name="SATELLITE">' +
-          '<shadow type="text">' +
-            '<field name="TEXT">satellite</field>' +
-          '</shadow>' +
-        '</value>' +
-        '<value name="SATELLITE">' +
-          '<shadow type="text">' +
-            '<field name="TEXT">satellite</field>' +
-          '</shadow>' +
-        '</value>' +
-      '</block>' +
-      '<block type="virtualsat_setRadarSensitivities" id="virtualsat_setRadarSensitivities">' +
-      '<value name="SATELLITE">' +
-        '<shadow type="text">' +
-          '<field name="TEXT">satellite</field>' +
-        '</shadow>' +
-      '</value>' +
-    '</block>' +
     '<block type="virtualsat_cycleSatellitePower"></block>' +
     '<block type="virtualsat_rebootSatellite">' +
     '<value name="SATELLITE">' +

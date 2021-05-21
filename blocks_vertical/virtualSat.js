@@ -67,8 +67,8 @@ Blockly.Blocks['virtualsat_stopEvent'] = {
           "name": "SATELLITE"
         }
       ],
-      "category": Blockly.Categories.event,
-      "extensions": ["colours_virtualSat", "shape_statement"]
+      "category": Blockly.Categories.lights,
+      "extensions": ["colours_lights", "shape_statement"]
     });
   }
 };
@@ -112,7 +112,7 @@ Blockly.Blocks['virtualsat_setRadarSensitivities'] = {
         }
       ],
       "category": Blockly.Categories.looks,
-      "extensions": ["colours_virtualSat", "shape_statement"]
+      "extensions": ["colours_movement", "shape_statement"]
     });
   }
 };
