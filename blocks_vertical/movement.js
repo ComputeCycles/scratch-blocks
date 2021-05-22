@@ -18,44 +18,27 @@
  * limitations under the License.
  */
 
- 'use strict';
+'use strict';
 
- goog.provide('Blockly.Blocks.movement');
- 
- goog.require('Blockly.Blocks');
- goog.require('Blockly.Colours');
- goog.require('Blockly.constants');
- goog.require('Blockly.ScratchBlocks.VerticalExtensions');
- 
- Blockly.Blocks['movement_arePresencesSensed'] = {
-   init: function() {
-     this.jsonInit({
-        "message0": 'Are any %1 sensing presence?',
-        "args0": [
-          {
-            "type": "input_value",
-            "name": "SATELLITE"
-          }
-        ],
-        "category": Blockly.Categories.movement,
-        "extensions": ["colours_movement", "output_boolean"]
-     });
-   }
- };
+goog.provide('Blockly.Blocks.movement');
 
- Blockly.Blocks['movement_waitUntilSatSensing'] = {
+goog.require('Blockly.Blocks');
+goog.require('Blockly.Colours');
+goog.require('Blockly.constants');
+goog.require('Blockly.ScratchBlocks.VerticalExtensions');
+
+Blockly.Blocks['movement_arePresencesSensed'] = {
   init: function() {
     this.jsonInit({
-      "message0": "Wait until a a presence is sensed %1",
-            "args0": [
-      {
-        "type": "input_value",
-        "name": "SATELLITE",
-        "check": "Boolean"
-      }
-    ],
-      "category": Blockly.Categories.touch,
-      "extensions": ["colours_movement", "shape_hat"]
+      "message0": 'Are any %1 sensing presence?',
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "SATELLITE"
+        }
+      ],
+      "category": Blockly.Categories.movement,
+      "extensions": ["colours_movement", "output_boolean"]
     });
   }
 };
@@ -70,7 +53,7 @@ Blockly.Blocks['movement_whenAnyPresenceSensed'] = {
           "name": "SATELLITE"
         }
       ],
-      "category": Blockly.Categories.touch,
+      "category": Blockly.Categories.movement,
       "extensions": ["colours_movement", "shape_hat"]
     });
   }
