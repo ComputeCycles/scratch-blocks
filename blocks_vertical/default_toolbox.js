@@ -559,7 +559,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
       '</block>' +
   '<category name="Messages" id="messages" colour="#008080" secondaryColour="#086363" ' +
     'showStatusButton="false">' +
-      '<block type="message_sendValueToTopic">' +
+      '<block type="messages_sendValueToTopic">' +
       '<value name="VALUE">' +
           '<shadow type="text">' +
             '<field name="TEXT">value</field>' +
@@ -571,14 +571,14 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
         '</shadow>' +
         '</value>' +
       '</block>' +
-      '<block type="message_addSubscription">' +
+      '<block type="messages_addSubscription">' +
         '<value name="TOPIC">' +
           '<shadow type="text">' +
             '<field name="TEXT">topic</field>' +
           '</shadow>' +
         '</value>' +
       '</block>' +
-      '<block type="message_deleteSubscriptions">' +
+      '<block type="messages_deleteSubscriptions">' +
       '</block>' +
     '</category>' +
     '<category name="Movement" id="movement" colour="#6666ff" secondaryColour="#2323B2" ' +
@@ -610,11 +610,11 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
   '</category>' +
   '<category name="%{BKY_CATEGORY_MYBLOCKS}" id="more" colour="#FF6680" secondaryColour="#FF4D6A" custom="PROCEDURE">' +
     '</category>' +
-  '<category name="Display Control" id="display" colour="#17C1CF" secondaryColour="#1D7B83" ' +
+  '<category name="Display Control" id="playspotDisplay" colour="#17C1CF" secondaryColour="#1D7B83" ' +
   'showStatusButton="false">' +
-    '<block type="display_image" id="display_image"></block>' +
-    '<block type="display_animateImage" id="display_animateImage"></block>' +
-    '<block type="display_fillImage" id="display_fillImage">' +
+    '<block type="playspotDisplay_image" id="playspotDisplay_image"></block>' +
+    '<block type="playspotDisplay_animateImage" id="playspotDisplay_animateImage"></block>' +
+    '<block type="playspotDisplay_fillImage" id="display_fillImage">' +
       '<value name="BEGIN">' +
         '<shadow type="text">' +
           '<field name="TEXT">begin</field>' +
@@ -641,7 +641,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
       '</shadow>' +
     '</value>' +
     '</block>' +
-    '<block type="display_displayHistogram" id="display_displayHistogram">' +
+    '<block type="playspotDisplay_displayHistogram" id="playspotDisplay_displayHistogram">' +
     '<value name="RED">' +
       '<shadow type="text">' +
         '<field name="TEXT">red</field>' +

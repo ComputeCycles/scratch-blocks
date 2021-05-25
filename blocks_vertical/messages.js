@@ -29,7 +29,7 @@ goog.require('Blockly.constants');
 goog.require('Blockly.ScratchBlocks.VerticalExtensions');
  
 
-Blockly.Blocks['message_sendValueToTopic'] = {
+Blockly.Blocks['messages_sendValueToTopic'] = {
   init: function() {
     this.jsonInit({
       "message0": "Send value %1 to Broadcast topic %2",
@@ -49,7 +49,7 @@ Blockly.Blocks['message_sendValueToTopic'] = {
   }
 };
 
-Blockly.Blocks['message_addSubscription'] = {
+Blockly.Blocks['messages_addSubscription'] = {
   init: function() {
     this.jsonInit({
       "message0": "Add MQTT subscription to topic: %1",
@@ -65,7 +65,7 @@ Blockly.Blocks['message_addSubscription'] = {
   }
 };
 
-Blockly.Blocks['message_deleteSubscriptions'] = {
+Blockly.Blocks['messages_deleteSubscriptions'] = {
   init: function() {
     this.jsonInit({
       "message0": "Delete all user MQTT subscriptions",
