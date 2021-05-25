@@ -21,14 +21,14 @@
 
 'use strict';
 
-goog.provide('Blockly.Blocks.display');
+goog.provide('Blockly.Blocks.playspotDisplay');
  
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Colours');
 goog.require('Blockly.constants');
 goog.require('Blockly.ScratchBlocks.VerticalExtensions');
 
-Blockly.Blocks['display_image'] = {
+Blockly.Blocks['playspotDisplay_image'] = {
   init: function() {
     this.jsonInit({
       "message0": "Display Image %1 in %2",
@@ -89,12 +89,12 @@ Blockly.Blocks['display_image'] = {
         }
       ],
       "category": Blockly.Categories.sound,
-      "extensions": ["colours_display", "shape_statement"]
+      "extensions": ["colours_playspotDisplay", "shape_statement"]
     });
   }
 };
 
-Blockly.Blocks['display_animateImage'] = {
+Blockly.Blocks['playspotDisplay_animateImage'] = {
   init: function() {
     this.jsonInit({
       "message0": "Animate image %1 to %2, from %3 in %4",
@@ -211,12 +211,12 @@ Blockly.Blocks['display_animateImage'] = {
         }
       ],
       "category": Blockly.Categories.sound,
-      "extensions": ["colours_display", "shape_statement"]
+      "extensions": ["colours_playspotDisplay", "shape_statement"]
     });
   }
 };
 
-Blockly.Blocks['display_fillImage'] = {
+Blockly.Blocks['playspotDisplay_fillImage'] = {
   init: function() {
     this.jsonInit({
       "message0": "Fill image %1 b/e: %2 / %3, RGB: %4 / %5 / %6 in %7",
@@ -297,12 +297,12 @@ Blockly.Blocks['display_fillImage'] = {
         }
       ],
       "category": Blockly.Categories.sound,
-      "extensions": ["colours_display", "shape_statement"]
+      "extensions": ["colours_playspotDisplay", "shape_statement"]
     });
   }
 };
 
-Blockly.Blocks['display_displayHistogram'] = {
+Blockly.Blocks['playspotDisplay_displayHistogram'] = {
   /**
      * Block for when a sprite is touching an object.
      * @this Blockly.Block
@@ -325,7 +325,7 @@ Blockly.Blocks['display_displayHistogram'] = {
         }
       ],
       "category": Blockly.Categories.event,
-      "extensions": ["colours_display", "shape_statement"]
+      "extensions": ["colours_playspotDisplay", "shape_statement"]
     });
   }
 };

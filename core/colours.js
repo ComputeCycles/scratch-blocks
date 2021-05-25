@@ -51,7 +51,7 @@ Blockly.Colours = {
     "secondary": "#1556E1",
     "tertiary": "#1556E1"
   },
-  "display": {
+  "playspotDisplay": {
     "primary": "#17C1CF",
     "secondary": "#1D7B83",
     "tertiary": "#1D7B83"
