@@ -47,7 +47,7 @@ Blockly.Blocks['lights_startsequence'] = {
 Blockly.Blocks['lights_sendSequence'] = {
   init: function() {
     this.jsonInit({
-      "message0": "Send Light sequence %1 to single Satellite %2",
+      "message0": "Send Light sequence %1 to Satellite(s): %2",
       "args0": [
         {
           "type": "input_value",
@@ -56,29 +56,6 @@ Blockly.Blocks['lights_sendSequence'] = {
         {
           "type": "input_value",
           "name": "SATELLITE"
-        }
-      ],
-      "category": Blockly.Categories.lights,
-      "extensions": ["colours_lights", "shape_statement"]
-    });
-  }
-};
-
-Blockly.Blocks['lights_sendSequenceGroup'] = {
-  init: function() {
-    this.jsonInit({
-      "message0": "Send Light sequence %1 to Satellite Group: %2",
-      "args0": [
-        {
-          "type": "input_value",
-          "name": "VALUE"
-        },
-        {
-          "type": "field_variable",
-          "name": "SATELLITE_GROUP",
-          "variable": "Sat Group",
-          "variableTypes": ["list"],
-          "defaultType": "list"
         }
       ],
       "category": Blockly.Categories.lights,

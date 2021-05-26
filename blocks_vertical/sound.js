@@ -263,7 +263,7 @@ Blockly.Blocks['sound_playSound'] = {
 Blockly.Blocks['sound_playSoundFromMQTT'] = {
   init: function() {
     this.jsonInit({
-      "message0": "Play Sound %1 on a single Satellite: %2",
+      "message0": "Play Sound %1 on Satellite(s): %2",
       "args0": [
         {
           "type": "input_value",
@@ -272,29 +272,6 @@ Blockly.Blocks['sound_playSoundFromMQTT'] = {
         {
           "type": "input_value",
           "name": "SATELLITE"
-        }
-      ],
-      "category": Blockly.Categories.lights,
-      "extensions": ["colours_lights", "shape_statement"]
-    });
-  }
-};
-
-Blockly.Blocks['sound_playSoundFromMQTTGroup'] = {
-  init: function() {
-    this.jsonInit({
-      "message0": "Play Sound %1 on a Satellite Group: %2",
-      "args0": [
-        {
-          "type": "input_value",
-          "name": "SOUND"
-        },
-        {
-          "type": "field_variable",
-          "name": "SATELLITE_GROUP",
-          "variable": "Sat Group",
-          "variableTypes": ["list"],
-          "defaultType": "list"
         }
       ],
       "category": Blockly.Categories.lights,
