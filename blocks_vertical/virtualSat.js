@@ -130,7 +130,7 @@ Blockly.Blocks['virtualsat_cycleSatellitePower'] = {
 Blockly.Blocks['virtualsat_rebootSatellite'] = {
   init: function() {
     this.jsonInit({
-      "message0": "Reboot Satellite %1",
+      "message0": "Reboot Satellite(s) %1",
       "args0": [
         {
           "type": "input_value",
