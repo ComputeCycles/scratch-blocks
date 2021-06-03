@@ -21,7 +21,7 @@
 
 'use strict';
 
-goog.provide('Blockly.Blocks.virtualSat');
+goog.provide('Blockly.Blocks.deviceControl');
 
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Colours');
@@ -47,7 +47,7 @@ Blockly.Blocks['event_whenstarted'] = {
   }
 };
 
-Blockly.Blocks['virtualsat_stopEvent'] = {
+Blockly.Blocks['deviceControl_stopEvent'] = {
   init: function() {
     this.jsonInit({
       "message0": "%1 lights on Satellite %2",
@@ -74,7 +74,7 @@ Blockly.Blocks['virtualsat_stopEvent'] = {
 };
 
 
-Blockly.Blocks['virtualsat_addNewVirtualSat'] = {
+Blockly.Blocks['deviceControl_addNewVirtualSat'] = {
   init: function() {
     this.jsonInit({
       "message0": "Add Satellite with Name %1",
@@ -85,12 +85,12 @@ Blockly.Blocks['virtualsat_addNewVirtualSat'] = {
         }
       ],
       "category": Blockly.Categories.looks,
-      "extensions": ["colours_virtualSat", "shape_statement"]
+      "extensions": ["colours_deviceControl", "shape_statement"]
     });
   }
 };
 
-Blockly.Blocks['virtualsat_setRadarSensitivities'] = {
+Blockly.Blocks['deviceControl_setRadarSensitivities'] = {
   init: function() {
     this.jsonInit({
       "message0": "Set Radar Sensitivity to %1 on %2",
@@ -117,17 +117,17 @@ Blockly.Blocks['virtualsat_setRadarSensitivities'] = {
   }
 };
 
-Blockly.Blocks['virtualsat_cycleSatellitePower'] = {
+Blockly.Blocks['deviceControl_cycleSatellitePower'] = {
   init: function() {
     this.jsonInit({
       "message0": "Cycle Satellite Power",
       "category": Blockly.Categories.looks,
-      "extensions": ["colours_virtualSat", "shape_statement"]
+      "extensions": ["colours_deviceControl", "shape_statement"]
     });
   }
 };
 
-Blockly.Blocks['virtualsat_rebootSatellite'] = {
+Blockly.Blocks['deviceControl_rebootSatellite'] = {
   init: function() {
     this.jsonInit({
       "message0": "Reboot Satellite(s) %1",
@@ -138,7 +138,7 @@ Blockly.Blocks['virtualsat_rebootSatellite'] = {
         }
       ],
       "category": Blockly.Categories.looks,
-      "extensions": ["colours_virtualSat", "shape_statement"]
+      "extensions": ["colours_deviceControl", "shape_statement"]
     });
   }
 };

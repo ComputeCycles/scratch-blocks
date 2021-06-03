@@ -26,7 +26,7 @@ goog.provide('Blockly.Colours');
 Blockly.Colours = {
   // SVG colours: these must be specificed in #RRGGBB style
   // To add an opacity, this must be specified as a separate property (for SVG fill-opacity)
-  "virtualSat": {
+  "deviceControl": {
     "primary": "#118000",
     "secondary": "#13520A",
     "tertiary": "#13520A"
