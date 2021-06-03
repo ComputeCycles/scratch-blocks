@@ -545,7 +545,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
       '</value>' +
     '</block>' +
   '</category>' +
-  '<block type="virtualsat_stopEvent">' +
+  '<block type="deviceControl_stopEvent">' +
         '<value name="SATELLITE">' +
           '<shadow type="text">' +
             '<field name="TEXT">satellite</field>' +
@@ -598,7 +598,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
         '</shadow>' +
       '</value>' +
     '</block>' +
-    '<block type="virtualsat_setRadarSensitivities" id="virtualsat_setRadarSensitivities">' +
+    '<block type="deviceControl_setRadarSensitivities" id="deviceControl_setRadarSensitivities">' +
     '<value name="SATELLITE">' +
       '<shadow type="text">' +
         '<field name="TEXT">satellite</field>' +
@@ -676,17 +676,17 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
         '</value>' +
       '</block>' +
     '</category>' +
-    '<category name="Device Control" id="virtualSat" colour="#118000" secondaryColour="#13520A" ' +
+    '<category name="Device Control" id="deviceControl" colour="#118000" secondaryColour="#13520A" ' +
     'showStatusButton="false">' +
-      '<block type="virtualsat_addNewVirtualSat">' +
+      '<block type="deviceControl_addNewVirtualSat">' +
         '<value name="VALUE">' +
           '<shadow type="text">' +
             '<field name="TEXT">Name</field>' +
           '</shadow>' +
         '</value>' +
       '</block>' +
-    '<block type="virtualsat_cycleSatellitePower"></block>' +
-    '<block type="virtualsat_rebootSatellite">' +
+    '<block type="deviceControl_cycleSatellitePower"></block>' +
+    '<block type="deviceControl_rebootSatellite">' +
     '<value name="SATELLITE">' +
       '<shadow type="text">' +
         '<field name="TEXT">satellite</field>' +
