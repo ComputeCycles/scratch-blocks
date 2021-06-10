@@ -580,6 +580,18 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
       '</block>' +
       '<block type="messages_deleteSubscriptions">' +
       '</block>' +
+      '<block type="messages_assignTopicToMessage">' +
+        '<value name="TOPIC">' +
+            '<shadow type="text">' +
+              '<field name="TEXT">topic</field>' +
+          '</shadow>' +
+        '</value>' +
+        '<value name="MESSAGE">' +
+            '<shadow type="text">' +
+              '<field name="TEXT">message</field>' +
+          '</shadow>' +
+        '</value>' +
+      '</block>' +
     '</category>' +
     '<category name="Movement" id="movement" colour="#6666ff" secondaryColour="#2323B2" ' +
     'showStatusButton="false">' +
