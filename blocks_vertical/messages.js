@@ -95,3 +95,19 @@ Blockly.Blocks['messages_assignTopicToMessage'] = {
     });
   }
 };
+
+Blockly.Blocks['messages_unassignTopicToMessage'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "Un-Assign message alias: %1",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "MESSAGE"
+        }
+      ],
+      "category": Blockly.Categories.messages,
+      "extensions": ["colours_messages", "shape_statement"]
+    });
+  }
+};
