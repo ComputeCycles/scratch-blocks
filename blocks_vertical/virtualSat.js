@@ -142,3 +142,19 @@ Blockly.Blocks['virtualsat_rebootSatellite'] = {
     });
   }
 };
+
+Blockly.Blocks['virtualsat_loadGameFile'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "Enter name of game file:  %1 .sb3",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "GAMENAME"
+        }
+      ],
+      "category": Blockly.Categories.looks,
+      "extensions": ["colours_virtualSat", "shape_statement"]
+    });
+  }
+};
