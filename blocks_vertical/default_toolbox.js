@@ -248,32 +248,6 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
       '</value>' +
     '</block>' +
     '<block type="sound_volume" id="sound_volume"></block>' +
-    '<block type="sound_playSoundFromMQTT">' +
-    '<value name="SOUND">' +
-      '<shadow type="text">' +
-        '<field name="TEXT">Sound</field>' +
-      '</shadow>' +
-    '</value>' +
-    '<value name="SATELLITE">' +
-      '<shadow type="text">' +
-        '<field name="TEXT">satellite</field>' +
-      '</shadow>' +
-    '</value>' +
-  '</block>' +
-  '<block type="sound_playSound">' +
-      '<value name="SOUND">' +
-        '<shadow type="text">' +
-          '<field name="TEXT">Sound Name</field>' +
-        '</shadow>' +
-    '</value>' +
-  '</block>' +
-  '<block type="sound_setVolume" id="sound_setVolume">' +
-    '<value name="SATELLITE">' +
-      '<shadow type="text">' +
-        '<field name="TEXT">satellite</field>' +
-      '</shadow>' +
-    '</value>' +
-  '</block>' +
   '</category>' +
   '<category name="%{BKY_CATEGORY_EVENTS}" id="events" colour="#FFD500" secondaryColour="#CC9900">' +
     '<block type="event_whenflagclicked" id="event_whenflagclicked"></block>' +
@@ -545,90 +519,6 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
       '</value>' +
     '</block>' +
   '</category>' +
-  '<block type="virtualsat_stopEvent">' +
-        '<value name="SATELLITE">' +
-          '<shadow type="text">' +
-            '<field name="TEXT">satellite</field>' +
-          '</shadow>' +
-        '</value>' +
-        '<value name="SATELLITE">' +
-          '<shadow type="text">' +
-            '<field name="TEXT">satellite</field>' +
-          '</shadow>' +
-        '</value>' +
-      '</block>' +
-  '<category name="Messages" id="messages" colour="#008080" secondaryColour="#086363" ' +
-    'showStatusButton="false">' +
-      '<block type="messages_sendValueToTopic">' +
-      '<value name="VALUE">' +
-          '<shadow type="text">' +
-            '<field name="TEXT">value</field>' +
-        '</shadow>' +
-        '</value>' +
-        '<value name="TOPIC">' +
-          '<shadow type="text">' +
-            '<field name="TEXT">topic</field>' +
-        '</shadow>' +
-        '</value>' +
-      '</block>' +
-      '<block type="messages_addSubscription">' +
-        '<value name="TOPIC">' +
-          '<shadow type="text">' +
-            '<field name="TEXT">topic</field>' +
-          '</shadow>' +
-        '</value>' +
-      '</block>' +
-      '<block type="messages_deleteSubscriptions">' +
-      '</block>' +
-      '<block type="messages_assignTopicToMessage">' +
-        '<value name="TOPIC">' +
-            '<shadow type="text">' +
-              '<field name="TEXT">topic</field>' +
-          '</shadow>' +
-        '</value>' +
-        '<value name="MESSAGE">' +
-            '<shadow type="text">' +
-              '<field name="TEXT">message</field>' +
-          '</shadow>' +
-        '</value>' +
-      '</block>' +
-      '<block type="messages_unassignTopicToMessage">' +
-        '<value name="MESSAGE">' +
-            '<shadow type="text">' +
-              '<field name="TEXT">message</field>' +
-          '</shadow>' +
-        '</value>' +
-      '</block>' +
-    '</category>' +
-    '<category name="Movement" id="movement" colour="#6666ff" secondaryColour="#2323B2" ' +
-    'showStatusButton="false">' +
-    '<block type="movement_waitUntilSatSensing"></block>' +
-    '<block type="movement_whenAnyPresenceSensed">' +
-      '<value name="SATELLITE">' +
-        '<shadow type="text">' +
-          '<field name="TEXT">satellite</field>' +
-        '</shadow>' +
-      '</value>' +
-      '</block>' +
-    '<block type="movement_arePresencesSensed">' +
-      '<value name="SATELLITE">' +
-        '<shadow type="text">' +
-          '<field name="TEXT">satellite</field>' +
-        '</shadow>' +
-      '</value>' +
-    '</block>' +
-    '<block type="virtualsat_setRadarSensitivities" id="virtualsat_setRadarSensitivities">' +
-    '<value name="SATELLITE">' +
-      '<shadow type="text">' +
-        '<field name="TEXT">satellite</field>' +
-      '</shadow>' +
-    '</value>' +
-  '</block>' +
-    '</category>' +
-  '<category name="%{BKY_CATEGORY_VARIABLES}" id="data" colour="#CF173B" secondaryColour="#DB6E00" custom="VARIABLE">' +
-  '</category>' +
-  '<category name="%{BKY_CATEGORY_MYBLOCKS}" id="more" colour="#FF6680" secondaryColour="#FF4D6A" custom="PROCEDURE">' +
-    '</category>' +
   '<category name="Display Control" id="playspotDisplay" colour="#17C1CF" secondaryColour="#1D7B83" ' +
   'showStatusButton="false">' +
     '<block type="playspotDisplay_image" id="playspotDisplay_image"></block>' +
@@ -678,6 +568,138 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
     '</value>' +
     '</block>' +
   '</category>' +
+  '<block type="virtualsat_stopEvent">' +
+        '<value name="SATELLITE">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">satellite</field>' +
+          '</shadow>' +
+        '</value>' +
+        '<value name="SATELLITE">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">satellite</field>' +
+          '</shadow>' +
+        '</value>' +
+      '</block>' +
+      '<category name="Lights and Sounds" id="lights" colour="#3399ff" secondaryColour="#1556E1" ' +
+      'showStatusButton="false">' +
+          '<block type="lights_sendSequence">' +
+              '<value name="VALUE">' +
+                  '<shadow type="text">' +
+                      '<field name="TEXT">sequence</field>' +
+                  '</shadow>' +
+              '</value>' +
+              '<value name="SATELLITE">' +
+                  '<shadow type="text">' +
+                      '<field name="TEXT">Satellite #</field>' +
+                  '</shadow>' +
+              '</value>' +
+          '</block>' +
+            '<block type="sound_playSoundFromMQTT">' +
+            '<value name="SOUND">' +
+            '<shadow type="text">' +
+                '<field name="TEXT">Sound</field>' +
+            '</shadow>' +
+            '</value>' +
+            '<value name="SATELLITE">' +
+            '<shadow type="text">' +
+                '<field name="TEXT">satellite</field>' +
+            '</shadow>' +
+            '</value>' +
+        '</block>' +
+        '<block type="sound_setVolume" id="sound_setVolume">' +
+        '<value name="SATELLITE">' +
+            '<shadow type="text">' +
+            '<field name="TEXT">satellite</field>' +
+            '</shadow>' +
+        '</value>' +
+        '</block>' +
+        '<block type="virtualsat_stopEvent">' +
+            '<value name="SATELLITE">' +
+            '<shadow type="text">' +
+                '<field name="TEXT">satellite</field>' +
+            '</shadow>' +
+            '</value>' +
+            '<value name="SATELLITE">' +
+            '<shadow type="text">' +
+                '<field name="TEXT">satellite</field>' +
+            '</shadow>' +
+            '</value>' +
+        '</block>' +
+        '<block type="sound_playSound">' +
+          '<value name="SOUND">' +
+            '<shadow type="text">' +
+              '<field name="TEXT">Sound Name</field>' +
+            '</shadow>' +
+          '</value>' +
+        '</block>' +
+        '</category>' +
+  '<category name="Messages" id="messages" colour="#008080" secondaryColour="#086363" ' +
+    'showStatusButton="false">' +
+      '<block type="messages_sendValueToTopic">' +
+      '<value name="VALUE">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">value</field>' +
+        '</shadow>' +
+        '</value>' +
+        '<value name="TOPIC">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">topic</field>' +
+        '</shadow>' +
+        '</value>' +
+      '</block>' +
+      '<block type="messages_addSubscription">' +
+        '<value name="TOPIC">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">topic</field>' +
+          '</shadow>' +
+        '</value>' +
+      '</block>' +
+      '<block type="messages_deleteSubscriptions">' +
+      '</block>' +
+      '<block type="messages_assignTopicToMessage">' +
+        '<value name="TOPIC">' +
+            '<shadow type="text">' +
+              '<field name="TEXT">topic</field>' +
+          '</shadow>' +
+        '</value>' +
+        '<value name="MESSAGE">' +
+            '<shadow type="text">' +
+              '<field name="TEXT">message</field>' +
+          '</shadow>' +
+        '</value>' +
+      '</block>' +
+      '<block type="messages_unassignTopicToMessage">' +
+        '<value name="MESSAGE">' +
+            '<shadow type="text">' +
+              '<field name="TEXT">message</field>' +
+          '</shadow>' +
+        '</value>' +
+      '</block>' +
+    '</category>' +
+    '<category name="Movement" id="movement" colour="#6666ff" secondaryColour="#2323B2" ' +
+    'showStatusButton="false">' +
+    '<block type="movement_whenAnyPresenceSensed">' +
+      '<value name="SATELLITE">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">satellite</field>' +
+        '</shadow>' +
+      '</value>' +
+      '</block>' +
+    '<block type="movement_arePresencesSensed">' +
+      '<value name="SATELLITE">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">satellite</field>' +
+        '</shadow>' +
+      '</value>' +
+    '</block>' +
+    '<block type="virtualsat_setRadarSensitivities" id="virtualsat_setRadarSensitivities">' +
+    '<value name="SATELLITE">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">satellite</field>' +
+      '</shadow>' +
+    '</value>' +
+  '</block>' +
+  '</category>' +
   '<category name="Touch" id="touch" colour="#ff6699" secondaryColour="#ff6699" ' +
     'showStatusButton="false">' +
     '<block type="touch_whenAnySatTouched">' +
@@ -713,6 +735,8 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
     '</value>' +
     '</block>' +
   '</category>' +
-  '<category name="%{BKY_CATEGORY_VARIABLES}" id="data" colour="#FF8C1A" secondaryColour="#DB6E00" custom="VARIABLE">' +
+  '<category name="%{BKY_CATEGORY_VARIABLES}" id="data" colour="#CF173B" secondaryColour="#DB6E00" custom="VARIABLE">' +
   '</category>' +
+  '<category name="%{BKY_CATEGORY_MYBLOCKS}" id="more" colour="#FF6680" secondaryColour="#FF4D6A" custom="PROCEDURE">' +
+    '</category>' +
   '</xml>';
