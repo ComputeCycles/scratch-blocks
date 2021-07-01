@@ -255,7 +255,7 @@ Blockly.Blocks['sound_playSound'] = {
         }
       ],
       "category": Blockly.Categories.sound,
-      "extensions": ["colours_sounds", "shape_statement"]
+      "extensions": ["colours_lights", "shape_statement"]
     });
   }
 };
