@@ -625,13 +625,6 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
             '</shadow>' +
             '</value>' +
         '</block>' +
-        '<block type="sound_playSound">' +
-          '<value name="SOUND">' +
-            '<shadow type="text">' +
-              '<field name="TEXT">Sound Name</field>' +
-            '</shadow>' +
-          '</value>' +
-        '</block>' +
         '</category>' +
   '<category name="Messages" id="messages" colour="#008080" secondaryColour="#086363" ' +
     'showStatusButton="false">' +
@@ -719,13 +712,6 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
     '</category>' +
     '<category name="Device Control" id="virtualSat" colour="#118000" secondaryColour="#13520A" ' +
     'showStatusButton="false">' +
-      '<block type="virtualsat_addNewVirtualSat">' +
-        '<value name="VALUE">' +
-          '<shadow type="text">' +
-            '<field name="TEXT">Name</field>' +
-          '</shadow>' +
-        '</value>' +
-      '</block>' +
     '<block type="virtualsat_cycleSatellitePower"></block>' +
     '<block type="virtualsat_rebootSatellite">' +
     '<value name="SATELLITE">' +
