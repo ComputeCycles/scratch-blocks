@@ -28,22 +28,6 @@ goog.require('Blockly.Colours');
 goog.require('Blockly.constants');
 goog.require('Blockly.ScratchBlocks.VerticalExtensions');
 
-Blockly.Blocks['lights_startsequence'] = {
-  init: function() {
-    this.jsonInit({
-      "message0": "Start Light Sequence By FileName %1",
-      "args0": [
-        {
-          "type": "input_value",
-          "name": "VALUE"
-        }
-      ],
-      "category": Blockly.Categories.lights,
-      "extensions": ["colours_lights", "shape_statement"]
-    });
-  }
-};
-
 Blockly.Blocks['lights_sendSequence'] = {
   init: function() {
     this.jsonInit({
