@@ -243,3 +243,69 @@ Blockly.Blocks['sound_volume'] = {
     });
   }
 };
+
+Blockly.Blocks['sound_playSound'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "Play Sound %1",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "SOUND"
+        }
+      ],
+      "category": Blockly.Categories.sound,
+      "extensions": ["colours_lights", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['sound_playSoundFromMQTT'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "Play Sound %1 on Satellite(s): %2",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "SOUND"
+        },
+        {
+          "type": "input_value",
+          "name": "SATELLITE"
+        }
+      ],
+      "category": Blockly.Categories.lights,
+      "extensions": ["colours_lights", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['sound_setVolume'] = {
+  init: function() {
+    console.log('setVolume from blocks');
+    this.jsonInit({
+      "message0": "Set Volume to %1 on %2",
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "VALUE",
+          "options": [
+            ['Mute', '0'],
+            ['Level 1', '50'],
+            ['Level 2', '60'],
+            ['Level 3', '70'],
+            ['Level 4', '80'],
+            ['Level 5', '90'],
+            ['Level 6', '100'],
+          ]
+        },
+        {
+          "type": "input_value",
+          "name": "SATELLITE"
+        }
+      ],
+      "category": Blockly.Categories.lights,
+      "extensions": ["colours_lights", "shape_statement"]
+    });
+  }
+};

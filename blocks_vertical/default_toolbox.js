@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /**
  * @license
  * Visual Blocks Editor
@@ -518,47 +519,210 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
       '</value>' +
     '</block>' +
   '</category>' +
-  '<category name="%{BKY_CATEGORY_VARIABLES}" id="data" colour="#FF8C1A" secondaryColour="#DB6E00" custom="VARIABLE">' +
+  '<category name="Display Control" id="playspotDisplay" colour="#17C1CF" secondaryColour="#1D7B83" ' +
+  'showStatusButton="false">' +
+    '<block type="playspotDisplay_image" id="playspotDisplay_image"></block>' +
+    '<block type="playspotDisplay_animateImage" id="playspotDisplay_animateImage"></block>' +
+    '<block type="playspotDisplay_fillImage" id="display_fillImage">' +
+      '<value name="BEGIN">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">begin</field>' +
+        '</shadow>' +
+      '</value>' +
+      '<value name="END">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">end</field>' +
+      '</shadow>' +
+    '</value>' +
+    '<value name="RED">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">red</field>' +
+      '</shadow>' +
+    '</value>' +
+    '<value name="GREEN">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">green</field>' +
+      '</shadow>' +
+    '</value>' +
+    '<value name="BLUE">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">blue</field>' +
+      '</shadow>' +
+    '</value>' +
+    '</block>' +
+    '<block type="playspotDisplay_displayHistogram" id="playspotDisplay_displayHistogram">' +
+    '<value name="RED">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">red</field>' +
+      '</shadow>' +
+    '</value>' +
+    '<value name="GREEN">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">green</field>' +
+      '</shadow>' +
+    '</value>' +
+    '<value name="BLUE">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">blue</field>' +
+      '</shadow>' +
+    '</value>' +
+    '</block>' +
   '</category>' +
-  '<category name="%{BKY_CATEGORY_MYBLOCKS}" id="more" colour="#FF6680" secondaryColour="#FF4D6A" custom="PROCEDURE">' +
-  '</category>' +
-  '<category name="Extensions" id="extensions" colour="#FF6680" secondaryColour="#FF4D6A" ' +
-    'iconURI="../media/extensions/wedo2-block-icon.svg" showStatusButton="true">' +
-    '<block type="extension_pen_down" id="extension_pen_down"></block>' +
-    '<block type="extension_music_drum" id="extension_music_drum">' +
-      '<value name="NUMBER">' +
-        '<shadow type="math_number">' +
-          '<field name="NUM">1</field>' +
+  '<block type="virtualsat_stopEvent">' +
+        '<value name="SATELLITE">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">satellite</field>' +
+          '</shadow>' +
+        '</value>' +
+        '<value name="SATELLITE">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">satellite</field>' +
+          '</shadow>' +
+        '</value>' +
+      '</block>' +
+      '<category name="Lights and Sounds" id="lights" colour="#3399ff" secondaryColour="#1556E1" ' +
+      'showStatusButton="false">' +
+          '<block type="lights_sendSequence">' +
+              '<value name="VALUE">' +
+                  '<shadow type="text">' +
+                      '<field name="TEXT">sequence</field>' +
+                  '</shadow>' +
+              '</value>' +
+              '<value name="SATELLITE">' +
+                  '<shadow type="text">' +
+                      '<field name="TEXT">Satellite #</field>' +
+                  '</shadow>' +
+              '</value>' +
+          '</block>' +
+            '<block type="sound_playSoundFromMQTT">' +
+            '<value name="SOUND">' +
+            '<shadow type="text">' +
+                '<field name="TEXT">Sound</field>' +
+            '</shadow>' +
+            '</value>' +
+            '<value name="SATELLITE">' +
+            '<shadow type="text">' +
+                '<field name="TEXT">satellite</field>' +
+            '</shadow>' +
+            '</value>' +
+        '</block>' +
+        '<block type="sound_setVolume" id="sound_setVolume">' +
+        '<value name="SATELLITE">' +
+            '<shadow type="text">' +
+            '<field name="TEXT">satellite</field>' +
+            '</shadow>' +
+        '</value>' +
+        '</block>' +
+        '<block type="virtualsat_stopEvent">' +
+            '<value name="SATELLITE">' +
+            '<shadow type="text">' +
+                '<field name="TEXT">satellite</field>' +
+            '</shadow>' +
+            '</value>' +
+            '<value name="SATELLITE">' +
+            '<shadow type="text">' +
+                '<field name="TEXT">satellite</field>' +
+            '</shadow>' +
+            '</value>' +
+        '</block>' +
+        '</category>' +
+  '<category name="Messages" id="messages" colour="#008080" secondaryColour="#086363" ' +
+    'showStatusButton="false">' +
+      '<block type="messages_sendValueToTopic">' +
+      '<value name="VALUE">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">value</field>' +
+        '</shadow>' +
+        '</value>' +
+        '<value name="TOPIC">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">topic</field>' +
+        '</shadow>' +
+        '</value>' +
+      '</block>' +
+      '<block type="messages_addSubscription">' +
+        '<value name="TOPIC">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">topic</field>' +
+          '</shadow>' +
+        '</value>' +
+      '</block>' +
+      '<block type="messages_deleteSubscriptions">' +
+      '</block>' +
+      '<block type="messages_assignTopicToMessage">' +
+        '<value name="TOPIC">' +
+            '<shadow type="text">' +
+              '<field name="TEXT">topic</field>' +
+          '</shadow>' +
+        '</value>' +
+        '<value name="MESSAGE">' +
+            '<shadow type="text">' +
+              '<field name="TEXT">message</field>' +
+          '</shadow>' +
+        '</value>' +
+      '</block>' +
+      '<block type="messages_unassignTopicToMessage">' +
+        '<value name="MESSAGE">' +
+            '<shadow type="text">' +
+              '<field name="TEXT">message</field>' +
+          '</shadow>' +
+        '</value>' +
+      '</block>' +
+    '</category>' +
+    '<category name="Movement" id="movement" colour="#6666ff" secondaryColour="#2323B2" ' +
+    'showStatusButton="false">' +
+    '<block type="movement_whenAnyPresenceSensed">' +
+      '<value name="SATELLITE">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">satellite</field>' +
         '</shadow>' +
       '</value>' +
       '</block>' +
-    '<block type="extension_wedo_motor" id="extension_wedo_motor"></block>' +
-    '<block type="extension_wedo_hat" id="extension_wedo_hat"></block>' +
-    '<block type="extension_wedo_boolean" id="extension_wedo_boolean"></block>' +
-    '<block type="extension_wedo_tilt_reporter" id="extension_wedo_reporter">' +
-      '<value name="TILT">' +
-        '<shadow type="extension_wedo_tilt_menu"></shadow>' +
-      '</value>' +
-    '</block>' +
-    '<block type="extension_music_reporter" id="extension_music_reporter"></block>' +
-    '<block type="extension_microbit_display" id="extension_microbit_display">' +
-      '<value name="MATRIX">' +
-        '<shadow type="matrix">' +
-          '<field name="MATRIX">0101010101100010101000100</field>' +
+    '<block type="movement_arePresencesSensed">' +
+      '<value name="SATELLITE">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">satellite</field>' +
         '</shadow>' +
       '</value>' +
     '</block>' +
-    '<block type="extension_music_play_note" id="extension_music_play_note">' +
-      '<value name="NOTE">' +
-        '<shadow type="note">' +
-          '<field name="NOTE">60</field>' +
+    '<block type="virtualsat_setRadarSensitivities" id="virtualsat_setRadarSensitivities">' +
+    '<value name="SATELLITE">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">satellite</field>' +
+      '</shadow>' +
+    '</value>' +
+  '</block>' +
+  '</category>' +
+  '<category name="Touch" id="touch" colour="#ff6699" secondaryColour="#ff6699" ' +
+    'showStatusButton="false">' +
+    '<block type="touch_whenAnySatTouched">' +
+      '<value name="SATELLITE">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">satellite</field>' +
         '</shadow>' +
       '</value>' +
-      '<value name="BEATS">' +
-        '<shadow type="math_number">' +
-          '<field name="NUM">0.25</field>' +
-        '</shadow>' +
-      '</value>' +
+      '</block>' +
+      '<block type="touch_isTouched">' +
+        '<value name="SATELLITE">' +
+          '<shadow type="text">' +
+            '<field name="TEXT">satellites</field>' +
+          '</shadow>' +
+        '</value>' +
+      '</block>' +
+    '</category>' +
+    '<category name="Device Control" id="virtualSat" colour="#118000" secondaryColour="#13520A" ' +
+    'showStatusButton="false">' +
+    '<block type="virtualsat_cycleSatellitePower"></block>' +
+    '<block type="virtualsat_rebootSatellite">' +
+    '<value name="SATELLITE">' +
+      '<shadow type="text">' +
+        '<field name="TEXT">satellite</field>' +
+      '</shadow>' +
+    '</value>' +
     '</block>' +
   '</category>' +
+  '<category name="%{BKY_CATEGORY_VARIABLES}" id="data" colour="#CF173B" secondaryColour="#DB6E00" custom="VARIABLE">' +
+  '</category>' +
+  '<category name="%{BKY_CATEGORY_MYBLOCKS}" id="more" colour="#FF6680" secondaryColour="#FF4D6A" custom="PROCEDURE">' +
+    '</category>' +
   '</xml>';
