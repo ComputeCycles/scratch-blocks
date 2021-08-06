@@ -625,6 +625,13 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
             '</shadow>' +
             '</value>' +
         '</block>' +
+        '<block type="virtualsat_loadGameFile">' +
+              '<value name="GAMENAME">' +
+                '<shadow type="text">' +
+                  '<field name="TEXT">file name</field>' +
+                '</shadow>' +
+              '</value>' +
+            '</block>' +
         '</category>' +
   '<category name="Messages" id="messages" colour="#008080" secondaryColour="#086363" ' +
     'showStatusButton="false">' +
