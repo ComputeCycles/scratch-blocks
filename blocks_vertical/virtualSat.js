@@ -158,3 +158,25 @@ Blockly.Blocks['virtualsat_loadGameFile'] = {
     });
   }
 };
+
+Blockly.Blocks['virtualsat_setRunningSpeed'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "Set VM clock speed to %1",
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "RUNSPEED",
+          "options": [
+            ['Turtle', 'turtle'],
+            ['Slow', 'slow'],
+            ['Standard', 'standard'],
+            ['Turbo', 'turbo']
+          ]
+        }
+      ],
+      "category": Blockly.Categories.looks,
+      "extensions": ["colours_virtualSat", "shape_statement"]
+    });
+  }
+};
