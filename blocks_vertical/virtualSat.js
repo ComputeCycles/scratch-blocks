@@ -168,8 +168,9 @@ Blockly.Blocks['virtualsat_setRunningSpeed'] = {
           "type": "field_dropdown",
           "name": "RUNSPEED",
           "options": [
+            ['Snail', 'snail'],
             ['Turtle', 'turtle'],
-            ['Slow', 'slow'],
+            ['Compatibility', 'slow'],
             ['Standard', 'standard'],
             ['Turbo', 'turbo']
           ]
