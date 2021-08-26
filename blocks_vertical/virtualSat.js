@@ -170,9 +170,9 @@ Blockly.Blocks['virtualsat_setRunningSpeed'] = {
           "options": [
             ['Snail', 'snail'],
             ['Turtle', 'turtle'],
-            ['Compatibility', 'slow'],
-            ['Standard', 'standard'],
-            ['Turbo', 'turbo']
+            ['Pedestrian', 'slow'],
+            ['Rabbit', 'standard'],
+            ['Cheetah', 'turbo']
           ]
         }
       ],
