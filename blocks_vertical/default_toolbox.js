@@ -568,18 +568,6 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
     '</value>' +
     '</block>' +
   '</category>' +
-  '<block type="virtualsat_stopEvent">' +
-        '<value name="SATELLITE">' +
-          '<shadow type="text">' +
-            '<field name="TEXT">satellite</field>' +
-          '</shadow>' +
-        '</value>' +
-        '<value name="SATELLITE">' +
-          '<shadow type="text">' +
-            '<field name="TEXT">satellite</field>' +
-          '</shadow>' +
-        '</value>' +
-      '</block>' +
       '<category name="Lights and Sounds" id="lights" colour="#3399ff" secondaryColour="#1556E1" ' +
       'showStatusButton="false">' +
           '<block type="lights_sendSequence">' +
@@ -625,21 +613,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
             '</shadow>' +
             '</value>' +
         '</block>' +
-        '<block type="virtualsat_loadGameFile">' +
-          '<value name="GAMENAME">' +
-            '<shadow type="text">' +
-              '<field name="TEXT">file name</field>' +
-            '</shadow>' +
-          '</value>' +
-        '</block>' +
-        '<block type="virtualsat_setRunningSpeed">' +
-          '<value name="RUNSPEED">' +
-            '<shadow type="text">' +
-              '<field name="TEXT">Run Speed</field>' +
-            '</shadow>' +
-          '</value>' +
-        '</block>' +
-        '</category>' +
+      '</category>' +
   '<category name="Messages" id="messages" colour="#008080" secondaryColour="#086363" ' +
     'showStatusButton="false">' +
       '<block type="messages_sendValueToTopic">' +
@@ -728,11 +702,25 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
     'showStatusButton="false">' +
     '<block type="virtualsat_cycleSatellitePower"></block>' +
     '<block type="virtualsat_rebootSatellite">' +
-    '<value name="SATELLITE">' +
-      '<shadow type="text">' +
-        '<field name="TEXT">satellite</field>' +
-      '</shadow>' +
-    '</value>' +
+      '<value name="SATELLITE">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">satellite</field>' +
+        '</shadow>' +
+      '</value>' +
+    '</block>' +
+    '<block type="virtualsat_loadGameFile">' +
+      '<value name="GAMENAME">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">file name</field>' +
+        '</shadow>' +
+      '</value>' +
+    '</block>' +
+    '<block type="virtualsat_setRunningSpeed">' +
+      '<value name="RUNSPEED">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">Run Speed</field>' +
+        '</shadow>' +
+      '</value>' +
     '</block>' +
   '</category>' +
   '<category name="%{BKY_CATEGORY_VARIABLES}" id="data" colour="#CF173B" secondaryColour="#DB6E00" custom="VARIABLE">' +
