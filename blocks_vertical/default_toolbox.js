@@ -673,6 +673,13 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
         '</shadow>' +
       '</value>' +
     '</block>' +
+    '<block type="movement_satStateChangeEvent">' +
+      '<value name="SATELLITE">' +
+        '<shadow type="text">' +
+          '<field name="TEXT">satellite</field>' +
+        '</shadow>' +
+      '</value>' +
+    '</block>' +
     '<block type="virtualsat_setRadarSensitivities" id="virtualsat_setRadarSensitivities">' +
     '<value name="SATELLITE">' +
       '<shadow type="text">' +

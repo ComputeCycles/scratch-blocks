@@ -59,4 +59,20 @@ Blockly.Blocks['movement_whenAnyPresenceSensed'] = {
   }
 };
 
+Blockly.Blocks['movement_satStateChangeEvent'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": 'Touch or Radar change on %1',
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "SATELLITE"
+        }
+      ],
+      "category": Blockly.Categories.movement,
+      "extensions": ["colours_movement", "output_boolean"]
+    });
+  }
+};
+
 
