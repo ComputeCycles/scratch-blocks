@@ -282,7 +282,6 @@ Blockly.Blocks['sound_playSoundFromMQTT'] = {
 
 Blockly.Blocks['sound_setVolume'] = {
   init: function() {
-    console.log('setVolume from blocks');
     this.jsonInit({
       "message0": "Set Volume to %1 on %2",
       "args0": [
