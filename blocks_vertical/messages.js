@@ -54,40 +54,9 @@ Blockly.Blocks['messages_addSubscription'] = {
     this.jsonInit({
       "message0": "Add MQTT subscription to topic: %1",
       "args0": [
-          {
-            "type": "input_value",
-            "name": "TOPIC"
-          }
-        ],
-      "category": Blockly.Categories.messages,
-      "extensions": ["colours_messages", "shape_statement"]
-    });
-  }
-};
-
-Blockly.Blocks['messages_deleteSubscriptions'] = {
-  init: function() {
-    this.jsonInit({
-      "message0": "Delete all user MQTT subscriptions",
-      "args0": [],
-      "category": Blockly.Categories.messages,
-      "extensions": ["colours_messages", "shape_statement"]
-    });
-  }
-};
-
-Blockly.Blocks['messages_assignTopicToMessage'] = {
-  init: function() {
-    this.jsonInit({
-      "message0": "Assign topic %1 to Scratch message %2",
-      "args0": [
         {
           "type": "input_value",
           "name": "TOPIC"
-        },
-        {
-          "type": "input_value",
-          "name": "MESSAGE"
         }
       ],
       "category": Blockly.Categories.messages,
@@ -96,14 +65,14 @@ Blockly.Blocks['messages_assignTopicToMessage'] = {
   }
 };
 
-Blockly.Blocks['messages_unassignTopicToMessage'] = {
+Blockly.Blocks['messages_deleteSingleSubscription'] = {
   init: function() {
     this.jsonInit({
-      "message0": "Un-Assign message alias: %1",
+      "message0": "Delete user MQTT subscription to topic: %1",
       "args0": [
         {
           "type": "input_value",
-          "name": "MESSAGE"
+          "name": "TOPIC"
         }
       ],
       "category": Blockly.Categories.messages,
