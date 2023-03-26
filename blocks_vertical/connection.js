@@ -27,23 +27,6 @@ goog.require('Blockly.Colours');
 goog.require('Blockly.constants');
 goog.require('Blockly.ScratchBlocks.VerticalExtensions');
 
-
-Blockly.Blocks['connection_sendConnection'] = {
-  init: function() {
-    this.jsonInit({
-      "message0": "Send Connection Message %1",
-      "args0": [
-        {
-          "type": "input_value",
-          "name": "VALUE"
-        }
-      ],
-      "category": Blockly.Categories.connection,
-      "extensions": ["colours_connection", "shape_statement"]
-    });
-  }
-};
-
 Blockly.Blocks['connection_isConnected'] = {
   init: function() {
     this.jsonInit({
