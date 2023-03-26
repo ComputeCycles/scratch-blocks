@@ -38,7 +38,7 @@ Blockly.Blocks['connection_isConnected'] = {
         }
       ],
       "category": Blockly.Categories.connection,
-      "extensions": ["colours_connection", "output_boolean"]
+      "extensions": ["colours_playspotDisplay", "output_boolean"]
     });
   }
 };
@@ -54,7 +54,7 @@ Blockly.Blocks['connection_whenAnyConnectorConnected'] = {
         }
       ],
       "category": Blockly.Categories.connection,
-      "extensions": ["colours_connection", "shape_hat"]
+      "extensions": ["colours_playspotDisplay", "shape_hat"]
     });
   }
 };
