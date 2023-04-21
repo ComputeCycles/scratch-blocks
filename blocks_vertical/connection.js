@@ -34,27 +34,11 @@ Blockly.Blocks['connection_isConnected'] = {
       "args0": [
         {
           "type": "input_value",
-          "name": "CONNECTOR"
+          "name": "BLOCK"
         }
       ],
       "category": Blockly.Categories.connection,
-      "extensions": ["colours_playspotDisplay", "output_boolean"]
-    });
-  }
-};
-
-Blockly.Blocks['connection_whenAnyConnectorConnected'] = {
-  init: function() {
-    this.jsonInit({
-      "message0": 'When connection detected at %1',
-      "args0": [
-        {
-          "type": "input_value",
-          "name": "CONNECTOR"
-        }
-      ],
-      "category": Blockly.Categories.connection,
-      "extensions": ["colours_playspotDisplay", "shape_hat"]
+      "extensions": ["colours_touch", "output_boolean"]
     });
   }
 };

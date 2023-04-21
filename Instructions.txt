@@ -1,0 +1,2 @@
+1. Make sure that `pyenv versions` has the current version set to 2.7.18
+2. npm run prepublish 
